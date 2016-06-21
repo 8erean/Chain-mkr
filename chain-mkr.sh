@@ -48,6 +48,7 @@ Edit_Chain() {
   echo 
   read RULE_NUM
   echo
+  iptables -L $EDIT_CHAIN --line-numbers | grep ^$RULE_NUM > /tmp/iptables_rule_copy.txt 
 }
 
 VAR1=1
