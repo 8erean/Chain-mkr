@@ -22,6 +22,7 @@ elif [[ $CHOICE == [X,x] ]] ; then
   exit
 else
   echo "Invalid Option! Try again."
+fi
 }
 
 
@@ -93,7 +94,8 @@ Protocol() {
   read INPUT
   if [[ $INPUT == [T,t] ]] ; then
     PROT1="-p tcp"
-    ()
+    ((VAR2++))
+    
 }
 
 VAR1=1
