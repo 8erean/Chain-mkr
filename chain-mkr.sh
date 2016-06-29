@@ -35,17 +35,17 @@ Create_Chain() {
     echo "Creating rule for INPUT Chain"
     CHAIN_1="iptables -I INPUT 1 "
     ((VAR1++))
-    Main
+    Protocol
   elif [[ $CHAIN == [F,f] ]] ; then
     echo "Creating rule for FORWARD Chain"
     CHAIN_1="iptables -I FORWARD 1 "
     ((VAR1++))
-    Main
+    Protocol
   elif [[ $CHAIN == [O,o] ]] ; then
     echo "Creating rule for OUTPUT Chain"
     CHAIN_1="iptables -I OUTPUT 1 "
     ((VAR1++))
-    Main
+    Protocol
   elif [[ $CHAIN == [X,x] ]] ; then
     ((VAR1++))
     echo "Exiting Chain Creation, back to Main Menu..."
@@ -93,7 +93,10 @@ Protocol() {
   echo
   read INPUT
   if [[ $INPUT == [T,t] ]] ; then
-    PROT1="-p tcp"
+    PROT1="-p tcp "
+    echo
+    echo "Now it's time to add a Service/Port."
+    echo
     ((VAR2++))
     
 }
