@@ -98,7 +98,39 @@ Protocol() {
     echo "Now it's time to add a Service/Port."
     echo
     ((VAR2++))
-    
+    Service
+  elif [[ $INPUT == [U,u] ]] ; then
+    PROT1="-p udp "
+    echo
+    echo "Now it's time to add a Service/Port"
+    echo
+    ((VAR2++))
+    Service
+  elif [[ $INPUT == [I,i] ]] ; then
+    echo "This will set you up to block or allow standard pings."
+    PROT1="-p icmp --icmp-type echo-reply "
+    echo
+    echo "Would you like to add a source IP address or range? Y/N?"
+    read INPUT2
+      if [[ $INPUT2 == [Y,y] ]] ; then
+        echo
+        ((VAR2++))
+        Source_Dest
+      elif [[ $INPUT2 == [N,n] ]] ; then
+        echo
+        echo "Ok then."
+        echo "Now it's time to Accept or Deny"
+        echo
+        ((VAR2++))
+        Jump
+      else
+        echo "Invalid option. Try again."
+        Protocol
+      fi
+  else
+    echo "Invalid option. Try again."
+    Protocol
+  fi
 }
 
 Service() {
