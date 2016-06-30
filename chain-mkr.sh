@@ -101,6 +101,18 @@ Protocol() {
     
 }
 
+Service() {
+  #placeholder for the Service Function
+}
+
+Source_Dest() {
+  #placeholder for the Source_Dest Function
+}
+
+Jump() {
+  #placeholder for the Jump Function
+}
+
 VAR1=1
 VAR2=1
 
