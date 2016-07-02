@@ -9,7 +9,6 @@ VAR2=1
 VAR3=1
 VAR4=1
 VAR5=1
-VAR6=1
 DEL1=1
 
 PROT1="protocol"
@@ -34,7 +33,7 @@ if [[ $CHOICE == [C,c] ]] ; then
 elif [[ $CHOICE == [D,d] ]] ; then
   while [ $DEL1 -eq 1 ]
     do
-      Del_Chain
+      Del_Rule
     done
 elif [[ $CHOICE == [X,x] ]] ; then
   echo "Goodbye!"
