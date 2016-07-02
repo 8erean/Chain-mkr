@@ -19,6 +19,7 @@ SRC_DEST_1="blockedHost"
 JUMP_1="jump"
 DEL_CHAIN="del_chain"
 
+clear
 echo
 echo
 echo "Create new Rule (C), Delete Rule (D), Exit (X)"
@@ -46,6 +47,7 @@ fi
 ################################################################################
 
 Create_Chain() {
+  clear
   echo "Which Chain? INPUT (I), FORWARD (F), OUTPUT (O), Exit (X)"
   echo
   read CHAIN
@@ -90,6 +92,7 @@ Create_Chain() {
 ################################################################################
 
 Protocol() {
+  clear
   echo
   echo "Which protocol? TCP (T), UDP (U), ICMP (I), or Exit (X)"
   echo
@@ -150,6 +153,7 @@ Protocol() {
 ################################################################################
 
 Service() {
+  clear
   echo "Which service would you like to use? Port number: "
   read SRV_NUM
   SERVICE_1="--dport $SRV_NUM "
@@ -183,6 +187,7 @@ Service() {
 ################################################################################
 
 Source_Dest() {
+  clear
   echo
   echo "Please type in the IP address, range of addresses, or CIDR network"
   echo
@@ -201,6 +206,7 @@ Source_Dest() {
 ################################################################################
 
 Jump() {
+  clear
   echo
   echo "Would you like to Accept (A), Reject (R), or Drop (D) traffic?"
   read JUMPER
@@ -302,6 +308,7 @@ Jump() {
 ################################################################################
 
 Del_Rule() {
+  clear
   echo "Which Chain? INPUT (I), FORWARD (F), OUTPUT (O), Exit (X)"
   echo
   read SELECT
@@ -334,4 +341,5 @@ Del_Rule() {
 
 ################################################################################
 
+clear
 Main
